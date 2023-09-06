@@ -1,0 +1,8 @@
+form-formulario
+label - texto 
+id - identificação
+input - entrada (nao tem informações no meio, abre e fecha)
+for - para
+type - tipo
+radio - seleção (marcar item)
+formbotstrap - site onde se encontra formulario

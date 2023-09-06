@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+    <label for="pNome">Digite seu Nome</label>
+    <input type="text" id="pNome">
+
+    <br>
+    <label for="pSobrenome">Digite seu Sobrenome</label>
+    <input type="text" id="pSobrenome">
+    <br>
+    <input type="button" value="Concatenar" onclick="mostrarNome()">
+</form>
+<br>
+<br>
+<br>
+<br>
+
+<form action="" id="MyCalc">
+    <label for="pv1" title="Informe o Valor 1">
+        Entre com o 1º valor ....:
+    </label>
+    <input type="text" id="pValor1"/>
+    <br>
+    <label for="pv2" title="Informe o Valor 2">
+        Entre com o 2º valor....:
+    </label>
+    <input type="text" id="pValor2"/>
+    <br/><br/>
+    <input type="button" value="Somar" onclick="somar()"/>
+    <input type="button" value="Subtrair" onclick="sub()"/>
+    <input type="button" value="Multiplicar" onclick="mult()"/>
+    <input type="button" value="Dividir" onclick="div()"/>
+</form>
+</body>
+<script src = "script.js"></script>
+</html>

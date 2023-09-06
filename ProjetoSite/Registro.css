@@ -1,0 +1,13 @@
+body {
+  background-image: url(img/pagamentoIns.jpg);
+  background-size: cover;
+  position: relative;
+  padding: 50px 0;
+  background-repeat: no-repeat;
+}
+.navbar{
+  background-color: rgb(85, 37, 130);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
