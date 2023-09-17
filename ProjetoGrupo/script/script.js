@@ -2,12 +2,12 @@ const keys = document.querySelectorAll('.key');
 const checkbox = document.querySelector('.checkbox__keys');
 const switcher = document.querySelector('.switcher');
 const keysSection = document.querySelector('.piano__keys');
-//essa linha de codigo esta armazenando a as notas que estão na pasta
+//reproduz o som da nota que esta armazenada na pasta note
 const playNote = (note) => {
     const audio = new Audio(`notes/${note}.wav`);
     audio.play();
 }
-//abaixo criamos o uma função para que quando eu clicamos com o botão do mouse na na tecla, reproduza o som da nota em que ela esta representada pela cor black or white
+//abaixo criamos o uma função para que quando eu clicamos com o botão do mouse na tecla, reproduza o som da nota em que ela esta representada pela cor black or white
 const handleMouseDown = (key) => {
     playNote(key.getAttribute('data-note'));
 

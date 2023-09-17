@@ -1,12 +1,12 @@
 body {
-    align-items: center;
+    align-items: baseline;
     background-image: linear-gradient(236deg, #0c0c0c, #e4e3e3);
-    
     height: 100vh;
     justify-content: center;
   }
   .card{
     display: flex;
+    justify-content: center;
   }
   header {
     display: flex;

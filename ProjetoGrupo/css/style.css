@@ -9,6 +9,7 @@
 
 body {
     background-color: #ebebeb;
+    font-family: 'Poppins', sans-serif;
 }
 
 .piano {
@@ -142,6 +143,7 @@ header {
 .nav {
     display: flex;
     justify-content: center; /* Centralizar horizontalmente */
+    font-family: 'Poppins', sans-serif;
 }
 
 .nav a {

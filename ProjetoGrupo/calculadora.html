@@ -14,12 +14,13 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Link do css-->
-    <link rel="stylesheet" href="styleCalc.css">
+    <link rel="stylesheet" href="css/styleCalc.css">
     
 
 
 </head>
 <header>
+    <!--criar um navbar-->
     <div class="nav">
         <a href="home.html">Home</a>
         <a href="index.html">Piano</a>
@@ -30,7 +31,10 @@
 <body>
     
 
-    <!--Area que contem os botões e adiciona as funcionalidades de cada -->
+     <!--Area que contem os botões e adiciona as funcionalidades de cada -->
+       <!-- A tag "tr" representa uma linha em uma tabela, neste caso, o valor de 1,2,3 e divisão (/) -->
+      <!-- a palavra onkeydown chama uma função antes da onkeypress acontecer, seria antes do usuario usar alguma tecla-->
+      <!-- a função event é puxada diretamente da funcionalidade js que é onde roda os calculos e os ifs para mostar na tela-->
     <table id="calcu">
         <tr>
             <td colspan="3"><input type="text" id="result"></td>
@@ -70,7 +74,7 @@
     </table>
 
 </body>
-<script src="Funcionalidade.js">
+<script src="script/Funcionalidade.js">
 </script>
 
 </html>
