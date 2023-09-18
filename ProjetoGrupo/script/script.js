@@ -71,7 +71,7 @@ const keyDownMapper = {
     "Backspace": () => handleMouseDown(keys[22]),
     "\\": () => handleMouseDown(keys[23]),
 }
-
+// quando parar de clicar a tecla voltará para a cor padrão e irá parar de emitir som
 const keyUpMapper = {
     "Tab": () => handleMouseUp(keys[0]),
     "1": () => handleMouseUp(keys[1]),
