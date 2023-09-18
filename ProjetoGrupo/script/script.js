@@ -44,7 +44,7 @@ checkbox.addEventListener('change', ({ target }) => {
     switcher.classList.remove('switcher--active');
     keysSection.classList.add('disabled-keys');
 });
-//quando teclar uma tecla irá emitir uma nota especifica e mudará a cor da tecla
+//quando uma tecla é pressionada irá emitir uma nota especifica e mudará a cor da tecla
 const keyDownMapper = {
     "Tab": () => handleMouseDown(keys[0]),
     "1": () => handleMouseDown(keys[1]),
