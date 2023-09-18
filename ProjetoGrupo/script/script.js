@@ -7,7 +7,7 @@ const playNote = (note) => {
     const audio = new Audio(`notes/${note}.wav`);
     audio.play();
 }
-//abaixo criamos o uma função para que quando eu clicamos com o botão do mouse na tecla, reproduza o som da nota em que ela esta representada pela cor black or white
+//abaixo criamos o uma função para que quando clicarmos com o botão do mouse na tecla, reproduza o som da nota em que ela esta representada pela cor black or white
 const handleMouseDown = (key) => {
     playNote(key.getAttribute('data-note'));
 
@@ -15,10 +15,10 @@ const handleMouseDown = (key) => {
         key.classList.add('black--pressed');
         return;
     }
-
+//muda a cor da tecla
     key.style.background = '#ddd';
 }
-
+//quando solta ou para de clicar o som para e a tecla volta a sua cor npadrão
 const handleMouseUp = (key) => {
 
     if (key.className.includes('black')) {
@@ -28,7 +28,7 @@ const handleMouseUp = (key) => {
 
     key.style.background = 'white';
 }
-//representar teclas com elementos para que quando clicar representar dois elementos diferentes
+//representar teclas com elementos para que quando clicar ela vai chamar a função 
 keys.forEach((key) => {
     key.addEventListener('mousedown', () => handleMouseDown(key))
     key.addEventListener('mouseup', () => handleMouseUp(key))
@@ -44,7 +44,7 @@ checkbox.addEventListener('change', ({ target }) => {
     switcher.classList.remove('switcher--active');
     keysSection.classList.add('disabled-keys');
 });
-
+//quando teclar uma tecla irá emitir uma nota especifica e mudará a cor da tecla
 const keyDownMapper = {
     "Tab": () => handleMouseDown(keys[0]),
     "1": () => handleMouseDown(keys[1]),
