@@ -1,7 +1,7 @@
 function dis(val) {
     document.getElementById("result").value += val
 }
-//basicamente a myFunction espera o evento "event " ser desparado, a logica por tras dela é que ela verifica se algum desses numeros foram digitados,
+// a myFunction espera o evento "event " ser desparado, a logica por tras dela é que ela verifica se algum desses numeros foram digitados,
 // se sim, adiciona o numero digitado no display
 
 function myFunction(event) {
@@ -14,7 +14,7 @@ function myFunction(event) {
         || event.key == '*' || event.key == '/')
         document.getElementById("result").value += event.key;
 }
-//aqui basicamente quando o usiario clicar enter no teclado vai funcionar
+//aqui quando o usiario clicar enter no teclado vai funcionar
 var cal = document.getElementById("calcu");
 cal.onkeyup = function (event) {
     if (event.keyCode === 13) {
@@ -25,14 +25,14 @@ cal.onkeyup = function (event) {
     }
 }
 
-// Function that evaluates the digit and return result
+// a Function solve para resolver as contas
 function solve() {
     let x = document.getElementById("result").value //aqui o script le os numeros digitados / operaçoes inseridas na pagina HTML
     let y = math.evaluate(x)  //aqui é onde a biblioteca math é usada para reconhecer as operaçoes matematicas utilizadas
     document.getElementById("result").value = y //aqui o resultado do cálculo é atribuído ao campo de entrada com o ID "result
 }
 
-// aqui é basicamente uma atribuição para o clear, clicando nele "substitui" tudo oque foi digitado por vazio, fazendo sumir tudo ("clear").
+// nessa linhatemos  uma atribuição para o clear, clicando nele "substitui" tudo oque foi digitado por vazio, fazendo sumir tudo ("clear").
 function clr() {
     document.getElementById("result").value = ""
 }
