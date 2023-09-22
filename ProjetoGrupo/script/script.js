@@ -7,33 +7,34 @@ const playNote = (note) => {
     const audio = new Audio(`notes/${note}.wav`);
     audio.play();
 }
-//abaixo criamos o uma função para que quando clicarmos com o botão do mouse na tecla, reproduza o som da nota em que ela esta representada pela cor black or white
+//abaixo criamos uma função para que quando clicarmos com o botão do mouse na tecla, ela muda de cor para para o background #ddd
 const handleMouseDown = (key) => {
+    //ação para quando clicar reproduzir as notas referente a cada tecla
     playNote(key.getAttribute('data-note'));
-
+//criar um if para identificar qual é a tecla preta e qual a tecla branca
     if (key.className.includes('black')) {
-        key.classList.add('black--pressed');
+        key.classList.add('black--pressed'); //classe criada no css para quando clicar na tecla preta, ela mudar de cor, para reduzir o codigo no script
         return;
     }
-//muda a cor da tecla
+//muda a cor da tecla branca quando pressionado
     key.style.background = '#ddd';
 }
 //quando solta ou para de clicar o som para e a tecla volta a sua cor npadrão
 const handleMouseUp = (key) => {
 
     if (key.className.includes('black')) {
-        key.classList.remove('black--pressed');
+        key.classList.remove('black--pressed');// remover a ação da classe criada no css
         return;
     }
 
     key.style.background = 'white';
 }
-//representar teclas com elementos para que quando clicar ela vai chamar a função 
+//executa a função de clique do mouse, para que reproduza o som e mude a cor da tecla quando pressionada e quando para de pressionar
 keys.forEach((key) => {
     key.addEventListener('mousedown', () => handleMouseDown(key))
     key.addEventListener('mouseup', () => handleMouseUp(key))
 });
-
+//criar ação do checkbox para quando clicar no "mostrar teclas" irá mostras as teclas q podem ser utilizadas para nao precisar clicar com apenas o mouse 
 checkbox.addEventListener('change', ({ target }) => {
     if (target.checked) {
         switcher.classList.add('switcher--active');
@@ -44,7 +45,7 @@ checkbox.addEventListener('change', ({ target }) => {
     switcher.classList.remove('switcher--active');
     keysSection.classList.add('disabled-keys');
 });
-//quando uma tecla é pressionada irá emitir uma nota especifica e mudará a cor da tecla
+//criar a mesma função do mouse só que para tocar com o nosso teclado abnt2
 const keyDownMapper = {
     "Tab": () => handleMouseDown(keys[0]),
     "1": () => handleMouseDown(keys[1]),
@@ -98,12 +99,12 @@ const keyUpMapper = {
     "Backspace": () => handleMouseUp(keys[22]),
     "\\": () => handleMouseUp(keys[23]),
 }
-
+//ação criada para quando pressionar a tecla
 document.addEventListener('keydown', (event) => {
-    event.preventDefault();
+    event.preventDefault();//preventDefault, nao deixa executar comportamento padrão das teclas "tab" por exemplo
     keyDownMapper[event.key]()
 });
-
+//ação criada para quando para
 document.addEventListener('keyup', (event) => {
     keyUpMapper[event.key]()
 });
