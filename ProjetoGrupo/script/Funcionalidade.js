@@ -4,7 +4,8 @@ function dis(val) {
 // a myFunction espera o evento "event " ser desparado, a logica por tras dela é que ela verifica se algum desses numeros foram digitados,
 // se sim, adiciona o numero digitado no display
 
-function myFunction(event) {
+function myFunction(event) {//A condição if que verifica se a tecla pressionada pelo usuário corresponde a um dos caracteres especificados.
+    //Os caracteres permitidos são dígitos de 0 a 9 e os operadores matemáticos '+' (adição), '-' (subtração), '*' (multiplicação) e '/' (divisão).
     if (event.key == '0' || event.key == '1'
         || event.key == '2' || event.key == '3'
         || event.key == '4' || event.key == '5'
